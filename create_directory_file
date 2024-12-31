@@ -1,0 +1,21 @@
+### Create a directory
+- name: "Create a directory if it does not exist"
+  file:
+    path: /home/ubuntu/backup
+    state: directory
+    mode: '0755'
+
+### Create a file
+- name: "Create a directory if it does not exist"
+  file:
+    path: /home/ubuntu/backup.txt
+    state: touch
+    mode: '0755'
+
+- name: "Recursively change ownership of a directory"
+  file:
+    path: /home/ubuntu/backup
+    state: directory
+    recurse: yes
+    owner: ubuntu
+    group: ubuntu
