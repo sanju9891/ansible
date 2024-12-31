@@ -19,3 +19,14 @@
     recurse: yes
     owner: ubuntu
     group: ubuntu
+
+- name: "Remove file."
+  file:
+    path: /home/ubuntu/backup.txt
+    state: absent
+
+- name: "Remove directory"
+  file:
+    path: /home/ubuntu/backup
+    state: absent
+
